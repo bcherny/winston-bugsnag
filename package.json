@@ -1,0 +1,29 @@
+{
+  "name": "winston-bugsnag",
+  "version": "1.0.0",
+  "description": "A Bugsnag transport for Winston",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bcherny/winston-bugsnag.git"
+  },
+  "keywords": [
+    "winston",
+    "bugsnag",
+    "transport",
+    "log"
+  ],
+  "author": "Boris Cherny <boris@performancejs.com> (http://performancejs.com/)",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/bcherny/winston-bugsnag/issues"
+  },
+  "homepage": "https://github.com/bcherny/winston-bugsnag",
+  "dependencies": {
+    "bugsnag": "^1.6.1",
+    "winston": "^0.9.0"
+  }
+}

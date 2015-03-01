@@ -2,7 +2,7 @@ var bugsnag = require('bugsnag'),
     util = require('util'),
     winston = require('winston')
 
-function Bugsnag (options) {
+function Bugsnag () {
 
   this.name = 'bugsnag'
 
@@ -19,10 +19,6 @@ Bugsnag.prototype.log = function (level, msg, meta, callback) {
     info: 'info',
     error: 'error',
     warn: 'warning'
-  }
-
-  if (!bugsnag.metaData.apiKey) {
-    throw new Error ('please configure bugsnag with your API key (see https://bugsnag.com/docs/notifiers/node)')
   }
 
   if (level in Object.keys(levelMapping)) {

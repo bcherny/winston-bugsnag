@@ -21,7 +21,7 @@ Bugsnag.prototype.log = function (level, msg, meta, callback) {
     warn: 'warning'
   }
 
-  if (level in Object.keys(levelMapping)) {
+  if (level in levelMapping) {
     bugsnag.notify(msg, {
       severity: levelMapping[level]
     }, meta)

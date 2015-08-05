@@ -1,6 +1,6 @@
 {
   "name": "winston-bugsnag",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Bugsnag transport for Winston",
   "main": "index.js",
   "scripts": {

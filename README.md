@@ -18,3 +18,7 @@ var winstonBugsnag = require('winston-bugsnag')
 bugsnag.register('api key goes here')
 winston.add(winstonBugsnag)
 ```
+
+# license
+
+MIT

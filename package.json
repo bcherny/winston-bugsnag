@@ -1,6 +1,6 @@
 {
   "name": "winston-bugsnag",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A Bugsnag transport for Winston",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "log"
   ],
   "author": "Boris Cherny <boris@performancejs.com> (http://performancejs.com/)",
-  "license": "CC0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bcherny/winston-bugsnag/issues"
   },

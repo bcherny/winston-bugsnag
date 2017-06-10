@@ -1,10 +1,15 @@
 {
   "name": "winston-bugsnag",
-  "version": "2.1.0",
-  "description": "A Bugsnag transport for Winston",
+  "version": "3.0.0",
+  "description": "Bugsnag transport for Winston",
   "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && npm run lint && tsc -d",
+    "clean": "rm -f index.d.ts",
+    "lint": "tslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -23,7 +28,13 @@
   },
   "homepage": "https://github.com/bcherny/winston-bugsnag",
   "dependencies": {
-    "bugsnag": "^1.6.1",
-    "winston": "^0.9.0"
+    "bugsnag": "^1.11.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.29",
+    "@types/winston": "^2.3.3",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
   }
 }

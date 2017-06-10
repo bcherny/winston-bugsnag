@@ -1,24 +1,39 @@
-# winston-bugsnag
+# Winston-Bugsnag
 
-A [Bugsnag](https://bugsnag.com) transport for [Winston](https://github.com/winstonjs/winston)
+[Bugsnag](https://bugsnag.com) transport for [Winston](https://github.com/winstonjs/winston)
 
-# installation
+# Installation
 
 ```sh
-npm install --save winston-bugsnag
+npm install winston-bugsnag --save
 ```
 
-# usage
+# Usage
 
 ```js
-var bugsnag = require('bugsnag')
-var winston = require('winston')
-var winstonBugsnag = require('winston-bugsnag')
+import * as bugsnag from 'bugsnag'
+import { add } from 'winston'
+import { BugsnagTransport } from 'winston-bugsnag'
 
-bugsnag.register('api key goes here')
-winston.add(winstonBugsnag)
+bugsnag.register('Bugsnag api key goes here')
+add(BugsnagTransport)
 ```
 
-# license
+# Passing `userId` to Bugsnag
+
+```js
+import * as bugsnag from 'bugsnag'
+import { add, log } from 'winston'
+import { BugsnagTransport } from './'
+
+bugsnag.register('api key goes here')
+add(BugsnagTransport)
+
+log('info', 'something', {
+  userId: 'abcdef'
+})
+```
+
+# License
 
 MIT

@@ -1,6 +1,6 @@
 {
   "name": "winston-bugsnag",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Bugsnag transport for Winston",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -8,6 +8,7 @@
     "build": "npm run clean && npm run lint && tsc -d",
     "clean": "rm -f index.d.ts",
     "lint": "tslint .",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc -w"
   },

@@ -19,8 +19,8 @@ export class BugsnagTransport extends Transport {
   log(
     level: WinstonLogLevel,
     msg: string,
-    meta: Meta,
-    callback: (error: Error | null, success: any) => any
+    meta?: Meta,
+    callback?: (error: Error | null, success: any) => any
   ) {
 
     // map of winston:bugsnag log levels
@@ -38,9 +38,11 @@ export class BugsnagTransport extends Transport {
     bugsnag.notify(msg, {
       metaData: meta,
       severity: levelMapping[level],
-      userId: meta.userId
+      userId: (meta || {}).userId
     })
 
-    callback(null, true)
+    if (callback) {
+      callback(null, true)
+    }
   }
 }
